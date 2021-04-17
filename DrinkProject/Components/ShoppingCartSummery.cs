@@ -17,7 +17,8 @@ namespace DrinkProject.Components
         }
         public IViewComponentResult Invoke()
         {
-            var items = shoppingCart.GetShoppingCartItems();
+ //           var items = shoppingCart.GetShoppingCartItems();
+            var items = new List<ShoppingCartItem>() { new ShoppingCartItem(), new ShoppingCartItem(), new ShoppingCartItem(), new ShoppingCartItem() };
             shoppingCart.ShoppingCartItems = items;
             var shoppingCartVM = new ShoppingCartViewModel
             {
