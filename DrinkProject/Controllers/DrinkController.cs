@@ -22,9 +22,11 @@ namespace DrinkProject.Controllers
         public ActionResult Index()
         {
             var drinks = DrinkRepository.Drinks;
-            DrinkListViewModel model = new DrinkListViewModel();
-            model.Drinks = drinks;
-            model.CurrentCategory = "Current category"; 
+            DrinkListViewModel model = new()
+            {
+                Drinks = drinks,
+                CurrentCategory = "Current category"
+            };
             return View(model);
         }
 

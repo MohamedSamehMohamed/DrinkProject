@@ -62,12 +62,8 @@ namespace DrinkProject.Data.mocks
                     }
                 };
             }
-            set
-            {
-
-            }  
         }
-        public IEnumerable<Drink> PreferredDrinks { get; set; }
+        public IEnumerable<Drink> PreferredDrinks { get;}
         public Drink GetDrinkById(int drinkId)
         {
             throw new NotImplementedException();
